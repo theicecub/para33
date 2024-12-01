@@ -24,8 +24,19 @@ finally:
 
 
 #Генерация ошибок
+import warnings
 
-age =-5
+#age =-5
 
-if age < 0:
-    raise ValueError("Возраст не может быть отрицательным")
+#if age < 0:
+    #raise ValueError("Возраст не может быть отрицательным")
+
+class MyError(Exception):
+    pass
+
+try:
+    print("Hello World")
+except MyError:
+    print("Просто проверка")
+
+warnings.warn("Это просто предупреждение")
