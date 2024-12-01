@@ -2,8 +2,8 @@
 try:
     a=int(input())
     b=int(input())
-    print(a/b)
-except ZeroDivisionError:
-    print("Деление на ноль невозможно")
-except ValueError:
-    print("Некорректные данные")
+    c = a/b
+except (ZeroDivisionError, ValueError):
+    print("Деление на ноль или неправильная конвертация типов")
+else:
+    print(c)
